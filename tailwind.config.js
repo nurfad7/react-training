@@ -23,7 +23,7 @@ export default {
         move: 'move 50s linear infinite',
       },
       boxShadow: {
-        'custom-gallery': '0px 60px 41px 0px #0000001F',
+        'custom-gallery': '0px 20px 41px 0px #0000001F',
       },
     },
   },

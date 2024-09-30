@@ -12,7 +12,7 @@ const WorkGallery: FC = () => {
     }, []);
 
     return (
-        <div className='w-full h-svh flex flex-col gap-10 py-14 relative'>
+        <div className='w-full h-svh flex flex-col py-7 relative'>
             <div className='w-full overflow-x-auto overflow-y-hidden hide-scrollbar'>
                 <div className='flex gap-10 min-w-max'>
                     { CAROUSEL_1.map((photo, key) => (
