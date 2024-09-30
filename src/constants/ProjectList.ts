@@ -24,42 +24,42 @@ const RECENT_WORKS: Project[] = [
 const CAROUSEL_1: ProjectPhoto[] = [
     {
         thumbnail: "./src/assets/imgs/work1.svg",
-        link: "",
+        link: "https://www.glean.com/",
     },
     {
         thumbnail: "./src/assets/imgs/work2.svg",
-        link: "",
+        link: "https://www.decodable.co/",
     },
     {
         thumbnail: "./src/assets/imgs/work3.svg",
-        link: "",
+        link: "https://nocknock.io/",
     },
     {
         thumbnail: "./src/assets/imgs/work4.png",
-        link: "",
+        link: "https://www.pixielabs.io/",
     },
 ]
 
 const CAROUSEL_2: ProjectPhoto[] = [
     {
         thumbnail: "./src/assets/imgs/work5.png",
-        link: "",
+        link: "javascript:void(0)",
     },
     {
         thumbnail: "./src/assets/imgs/work6.svg",
-        link: "",
+        link: "javascript:void(0)",
     },
     {
         thumbnail: "./src/assets/imgs/work7.svg",
-        link: "",
+        link: "javascript:void(0)",
     },
     {
         thumbnail: "./src/assets/imgs/work8.png",
-        link: "",
+        link: "javascript:void(0)",
     },
     {
         thumbnail: "./src/assets/imgs/work9.png",
-        link: "",
+        link: "javascript:void(0)",
     },
 ]
 

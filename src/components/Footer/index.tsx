@@ -5,10 +5,10 @@ const Footer: FC = () => {
         <div className='flex justify-between items-end h-48 w-full px-16 py-16 bg-black text-white'>
             <div>Build with 💖 by Brightscout & Ayush</div>
             <div className='flex gap-8'>
-                <a href="linkedin.com" target='_blank'>LinkedIn</a>
-                <a href="x.com" target='_blank'>Twitter</a>
-                <a href="instagram.com" target='_blank'>Instagram</a>
-                <a href="webflow.com" target='_blank'>Webflow</a>
+                <a href="https://linkedin.com" target='_blank' rel='noopener noreferrer'>LinkedIn</a>
+                <a href="https://x.com" target='_blank' rel='noopener noreferrer'>Twitter</a>
+                <a href="https://instagram.com" target='_blank' rel='noopener noreferrer'>Instagram</a>
+                <a href="https://webflow.com" target='_blank' rel='noopener noreferrer'>Webflow</a>
             </div>
         </div>
     )

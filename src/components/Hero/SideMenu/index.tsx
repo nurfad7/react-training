@@ -33,10 +33,10 @@ const SideMenu: FC<SideMenuProps> = ({isVisible, toggleVisibility}) => {
                     <Link to='/contact'>Contact</Link>
                 </div>
                 <div className='flex gap-7'>
-                    <a href="linkedin.com" target='_blank'>LinkedIn</a>
-                    <a href="x.com" target='_blank'>Twitter</a>
-                    <a href="instagram.com" target='_blank'>Instagram</a>
-                    <a href="webflow.com" target='_blank'>Webflow</a>
+                    <a href="https://linkedin.com" target='_blank' rel='noopener noreferrer'>LinkedIn</a>
+                    <a href="https://x.com" target='_blank' rel='noopener noreferrer'>Twitter</a>
+                    <a href="https://instagram.com" target='_blank' rel='noopener noreferrer'>Instagram</a>
+                    <a href="https://webflow.com" target='_blank' rel='noopener noreferrer'>Webflow</a>
                 </div>
             </div>
         </div>

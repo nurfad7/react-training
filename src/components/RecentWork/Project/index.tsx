@@ -20,7 +20,7 @@ const Project: FC<Project> = ({name, roles, link}) => {
                 <a className='bg-white rounded-full w-20 h-20 flex justify-center hover:bg-dark-grey
                                    hover:text-white text-dark-grey items-center 
                                    cursor-pointer border border-dark-grey'
-                    href={link} target="_blank" rel="noreferrer" aria-label='visit project'>
+                    href={link} target="_blank" rel="noopener noreferrer" aria-label='visit project'>
                     <Icon icon={faArrowUp} className='rotate-[45deg] text-4xl' />
                 </a>
             </div>
