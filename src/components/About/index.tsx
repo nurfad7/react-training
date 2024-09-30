@@ -3,18 +3,12 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 interface AboutProps {
-    isAtAbout: boolean,
+    isAtHero: boolean,
     isVisible: boolean,
     toggleVisibility: () => void;
 }
 
-const About: FC<AboutProps> = ({isVisible, toggleVisibility, isAtAbout}) => {
-    const goToAbove = () => {
-        toggleVisibility();
-        window.location.hash = '#about';
-        window.location.hash = '';
-    }
-
+const About: FC<AboutProps> = ({isVisible, toggleVisibility, isAtHero}) => {
     return (
         <div id="about" title='about' className='flex gap-16 px-16 py-20 relative'>
             <div className='w-[calc(30%-104px)] text-4xl font-medium text-left'>About</div>
@@ -25,10 +19,10 @@ const About: FC<AboutProps> = ({isVisible, toggleVisibility, isAtAbout}) => {
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
                 in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </div>
-            <div className={`bg-black rounded-full w-10 h-10 flex justify-center 
-                        text-white items-center cursor-pointer absolute top-3 right-5
-                        ${!isVisible && isAtAbout ? 'block' : 'hidden'}`}
-                 onClick={goToAbove}>
+            <div className={`bg-black rounded-full w-10 h-10 flex justify-center z-10
+                        text-white items-center cursor-pointer top-3 right-5 fixed
+                        ${!isVisible && !isAtHero ? 'block' : 'hidden'}`}
+                 onClick={toggleVisibility}>
                 <Icon className='text-lg' icon={faBars} />
             </div>
         </div>

@@ -13,20 +13,20 @@ const Home: FC = () => {
         setIsOpen(!isOpen);
     };
 
-    const [isAtAbout, setIsAtAbout] = useState(false);
+    const [isAtHero, setIsAtHero] = useState(false);
 
     useEffect(() => {
       const handleScroll = () => {
-            const element = document.getElementById('about');
+            const element = document.getElementById('hero');
             if (element) {
                 const rect = element.getBoundingClientRect();
                 if (
                     rect.top >= 0 &&
                     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
                 ) {
-                    setIsAtAbout(true);
+                    setIsAtHero(true);
                 } else {
-                    setIsAtAbout(false);
+                    setIsAtHero(false);
                 }
             }
       };
@@ -38,8 +38,8 @@ const Home: FC = () => {
 
     return (
         <>
-            <Hero toggleVisibility={toggleMenu} isVisible={isOpen} />
-            <About toggleVisibility={toggleMenu} isVisible={isOpen} isAtAbout={isAtAbout} />
+            <Hero toggleVisibility={toggleMenu} isVisible={isOpen} isAtHero={isAtHero} />
+            <About toggleVisibility={toggleMenu} isVisible={isOpen} isAtHero={isAtHero} />
             <RecentWork />
             <WorkGallery />
             <Testimonial />
