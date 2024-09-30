@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react'
 import Hero from '../../components/Hero';
 import About from '../../components/About';
 import RecentWork from '../../components/RecentWork';
@@ -13,10 +13,33 @@ const Home: FC = () => {
         setIsOpen(!isOpen);
     };
 
+    const [isAtAbout, setIsAtAbout] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+            const element = document.getElementById('about');
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                if (
+                    rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                ) {
+                    setIsAtAbout(true);
+                } else {
+                    setIsAtAbout(false);
+                }
+            }
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    }, []);
+
     return (
         <>
             <Hero toggleVisibility={toggleMenu} isVisible={isOpen} />
-            <About toggleVisibility={toggleMenu} isVisible={isOpen} />
+            <About toggleVisibility={toggleMenu} isVisible={isOpen} isAtAbout={isAtAbout} />
             <RecentWork />
             <WorkGallery />
             <Testimonial />

@@ -1,48 +1,19 @@
-import { FC, useState, useRef, useEffect } from 'react';
+import { FC } from 'react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 interface AboutProps {
+    isAtAbout: boolean,
     isVisible: boolean,
     toggleVisibility: () => void;
 }
 
-const About: FC<AboutProps> = ({toggleVisibility}) => {
-    const [isAtAbout, setIsAtAbout] = useState(false);
-
+const About: FC<AboutProps> = ({isVisible, toggleVisibility, isAtAbout}) => {
     const goToAbove = () => {
         toggleVisibility();
         window.location.hash = '#about';
         window.location.hash = '';
     }
-
-    const aboutRef = useRef<HTMLElement | null>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const entry = entries[0];
-                if (entry.isIntersecting) {
-                    setIsAtAbout(false);
-                    console.log('11')
-                } else {
-                    setIsAtAbout(true);
-                    console.log('22')
-                }
-            },
-            { threshold: 0.6 }
-        );
-
-        if (aboutRef.current) {
-            observer.observe(aboutRef.current);
-        }
-
-        return () => {
-            if (aboutRef.current) {
-                observer.unobserve(aboutRef.current);
-            }
-        };
-    }, []);
 
     return (
         <div id="about" title='about' className='flex gap-16 px-16 py-20 relative'>
@@ -56,7 +27,7 @@ const About: FC<AboutProps> = ({toggleVisibility}) => {
             </div>
             <div className={`bg-black rounded-full w-10 h-10 flex justify-center 
                         text-white items-center cursor-pointer absolute top-3 right-5
-                        ${!isAtAbout ? 'block' : 'hidden'}`}
+                        ${!isVisible && isAtAbout ? 'block' : 'hidden'}`}
                  onClick={goToAbove}>
                 <Icon className='text-lg' icon={faBars} />
             </div>
