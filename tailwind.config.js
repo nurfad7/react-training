@@ -18,9 +18,14 @@ export default {
           '0%': {transform: 'translateX(100%)'},
           '100%': {transform: 'translateX(-100%)'},
         },
+        gallery: {
+          '0%': {transform: 'translateX(0%)'},
+          '100%': {transform: 'translateX(-100%)'},
+        },
       },
       animation: {
         move: 'move 50s linear infinite',
+        gallery: 'gallery 50s linear infinite',
       },
       boxShadow: {
         'custom-gallery': '0px 20px 41px 0px #0000001F',

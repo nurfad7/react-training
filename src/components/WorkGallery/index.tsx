@@ -14,14 +14,14 @@ const WorkGallery: FC = () => {
     return (
         <div className='w-full h-svh flex flex-col py-7 relative'>
             <div className='w-full overflow-x-auto overflow-y-hidden hide-scrollbar'>
-                <div className='flex gap-10 min-w-max'>
+                <div className='flex gap-10 min-w-max animate-gallery'>
                     { CAROUSEL_1.map((photo, key) => (
                         <Work key={key} {...photo}/>
                     ))}
                 </div>
             </div>
             <div ref={scrollRef} className='w-full overflow-x-auto overflow-y-hidden hide-scrollbar'>
-                <div className='flex gap-10 min-w-max'>
+                <div className='flex gap-10 min-w-max animate-move'>
                     { CAROUSEL_2.map((photo, key) => (
                         <Work key={key} {...photo}/>
                     ))}
