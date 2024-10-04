@@ -1,7 +1,7 @@
 type Testimony = {
-    name: string;
-    photo: string;
-    role: string;
-    at: string;
-    testimony: string;
+  name: string;
+  photo: string;
+  role: string;
+  at: string;
+  testimony: string;
 }

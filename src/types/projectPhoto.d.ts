@@ -1,4 +1,4 @@
 type ProjectPhoto = {
-    thumbnail: string;
-    link: string;
+  thumbnail: string;
+  link: string;
 }

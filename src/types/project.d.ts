@@ -1,5 +1,5 @@
 type Project = {
-    name: string;
-    roles: string[];
-    link: string;
+  name: string;
+  roles: string[];
+  link: string;
 }
